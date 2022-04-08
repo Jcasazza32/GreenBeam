@@ -1,24 +1,29 @@
-import { TouchableHighlight, StyleSheet, Text, View, TextInput, Keyboard  } from 'react-native';
-
+import { TouchableHighlight, Text, View, TextInput,Image} from 'react-native';
+import { Dimensions } from 'react-native';
 import React from 'react';
+import {styles} from './style.js';
 
+const fontwidth= Dimensions.get('window').width
 export default function LoginScreenload({ navigation }) {
     const [Username, onUserName] = React.useState();
     const [Password, onPassword ] = React.useState();
-
+   
+    
     const loginAttemt = (Username, Password) =>{
       if(Boolean(Username) && Boolean(Password)){ //Must have a username and pasword defined  
       console.log(Username);
       console.log(Password);
-      navigation.push("HomeDrawer");
+      navigation.navigate('HomeDrawer');
       }else{
         console.log("done")
       }
     }
-
+  
+    //
   return (
       <View style={styles.container}> 
-      
+      <Text style = {{fontSize:0.2*fontwidth,fontFamily: 'Redressed_400Regular',color: '#fff',}}> Green Beam  </Text>
+      <Image source = {require('./greenbeamlogo.png')} style = {{ width: '80%', height: '30%',marginTop: 50 ,marginBottom: 30}}/>
       <TextInput
         style={styles.input}
         onChangeText={onUserName}
@@ -47,34 +52,3 @@ export default function LoginScreenload({ navigation }) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#118c34',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-   button: {
-    backgroundColor: "#fff",
-     alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 15,
-    margin: 8,
-    height: 40,
-    width: 200,
-  },
-  text: {
-     fontSize: 20,
-      borderColor: 'black',
-  },
-  input: {
-    height: 40,
-    width: 200,
-    margin: 8,
-    borderWidth: 1,
-    padding: 10,
-    backgroundColor: "#fff",
-    textAlign: 'center'
-  },
-});
