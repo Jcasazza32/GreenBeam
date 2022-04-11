@@ -44,7 +44,7 @@ export default function CreateAccountLoad({ navigation }) {
         placeholder="Phone number"
       />
 
-    <TouchableHighlight onPress={() => CreateAccountAttemp(Username, Password, Email)} style={styles.button}>
+    <TouchableHighlight onPress={() => CreateAccountAttemp(Username, Password, Email)} style={styles.button }>
             <Text style = {styles.text}>
                Create Account 
             </Text>

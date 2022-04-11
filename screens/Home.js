@@ -30,7 +30,7 @@ export default function HomeLoad() {
   */
 
   /*
-  <MapView
+<MapView
          style={mapstyles.map}
          provider={PROVIDER_GOOGLE}
          showsUserLocation
@@ -41,13 +41,14 @@ export default function HomeLoad() {
          longitudeDelta: 0.0421}}
         />
   */
+  
+  
   return (
     <View style={styles.home}> 
       <View style={{height: 400,
    width: 400, backgroundColor: '#fff'}}>
         
       </View>
-      <Text>Home</Text>
     </View>
   );
 }
