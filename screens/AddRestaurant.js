@@ -23,6 +23,7 @@ export default function App() {
       setNSelected (false)
     }else{
       setYSelected(false) 
+      setNSelected (true)
     }
   }
   
